@@ -1,17 +1,18 @@
 public class Boat extends Vehicle {
-    public String power;
-    public float draft;
-    public String manufacturer;
+    // Properties
+    private String power, manufacturer;
+    private float draft;
 
-    public Boat(String identifier,
-                String descriptor,
-                float weight,
-                float width,
-                float height,
-                float length,
-                String power,
-                float draft,
-                String manufacturer) {
+    public Boat(
+            String identifier,
+            String descriptor,
+            float weight,
+            float width,
+            float height,
+            float length,
+            String power,
+            float draft,
+            String manufacturer) {
 
         super(identifier, descriptor, weight, width, height, length);
 

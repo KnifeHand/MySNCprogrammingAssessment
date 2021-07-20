@@ -1,11 +1,7 @@
 public class Vehicle {
     // Create class attributes
-    public String identifier;
-    public String descriptor;
-    public float weight;
-    public float width;
-    public float height;
-    public float length;
+    private String identifier, descriptor;
+    private float weight, width, height, length;
 
     // Vehicle constructor
     public Vehicle(String identifier,
@@ -14,7 +10,7 @@ public class Vehicle {
                    float width,
                    float height,
                    float length) {
-        
+
         this.identifier = identifier;
         this.descriptor = descriptor;
         this.weight = weight;

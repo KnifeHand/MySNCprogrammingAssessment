@@ -1,9 +1,7 @@
 public class Car extends Vehicle{
-
-    public String manufacturer;
-    public int modelYear;
-    public String bodyStyle;
-    public String fuel;
+    // Properties
+    private String manufacturer, bodyStyle, fuel;
+    private int modelYear;
 
     public Car(String identifier,
                String descriptor,
