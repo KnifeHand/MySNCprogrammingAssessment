@@ -1,55 +1,32 @@
-import java.sql.Array;
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
 public class TripData {
-    // Attributes
-    private Array carTrip;
-    private Array boatTrip;
+    private List carTrip;
+    private List boatTrip;
 
     // Trip constructor
     public TripData() {
-       String[] carTrip = new String[15];
-       String[] boatTrip = new String[15];
+        // Attributes
+        carTrip = new LinkedList();
+        boatTrip = new LinkedList();
     }
 
-    public TripData(
-            double startLat,
-            double startLong,
-            double bearing,
-            double distFeet) {
-    }
+    public void addCarTrip(double startLat, double startLong,
+                           double bearing, double distFeet, String vic) throws Exception {
+        Zone zone1 = new Zone();
 
-    public void addCarTrip(
-            double startLat,
-            double startLong,
-            double bearing,
-            double distFeet) {
+        GeoCalc.EndingCoordinateData calc = GeoCalc.getEndingCoordinates(
+                startLat, startLong, bearing, distFeet);
 
-        Vehicle car = new Car(
-                "CAR",
-                "Leaf",
-                3243f,
-                5.81f,
-                5.08f,
-                14.58f,
-                "Nissan",
-                2014,
-                "COMPACT",
-                "ELECTRIC");
+//        GeoCalc.GreatCircleData calcCircle = GeoCalc.getGreatCircleDistance(15.6,
+//                -49.8, 17.0, -20.0);
 
-        TripData tripData = new TripData(
-                startLat,
-                startLong,
-                bearing,
-                distFeet);
-    }
-
-//    public static void ran
-//    bearing
-//    bearing = currBearing + (randBearing)
+        System.out.println("End Lat: " + calc.endLatitude);
+        System.out.println("End Long: " + calc.endLongitude);
+        System.out.println("End bearing: " + calc.endBearing);
+        zone1.checkZone(startLat, startLong, vic);
 //
-//            randBearingCar = randcarBearing (generator for + or - 90)
-//            if new bearing is negative add 360
+//        System.out.println("Reverse bearing: " + calcCircle.reverseBearing);
+    }
 }
