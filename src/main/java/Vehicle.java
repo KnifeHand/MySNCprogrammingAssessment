@@ -1,38 +1,49 @@
 public class Vehicle {
     // Create class attributes
-    public float identifier;
-    public float descriptor;
+    public String identifier;
+    public String descriptor;
     public float weight;
     public float width;
     public float height;
+    public float length;
 
     // Vehicle constructor
-    public Vehicle(float identifier,
-                   float descriptor,
+    public Vehicle(String identifier,
+                   String descriptor,
                    float weight,
                    float width,
-                   float height) {
+                   float height,
+                   float length) {
         
         this.identifier = identifier;
         this.descriptor = descriptor;
         this.weight = weight;
         this.width = width;
         this.height = height;
+        this.length = length;
     }
 
-    public float getIdentifier() {
+    public float getLength() {
+        return length;
+    }
+
+    public void setLength(float length) {
+        this.length = length;
+    }
+
+    public String getIdentifier() {
         return identifier;
     }
 
-    public void setIdentifier(float identifier) {
+    public void setIdentifier(String identifier) {
         this.identifier = identifier;
     }
 
-    public float getDescriptor() {
+    public String  getDescriptor() {
         return descriptor;
     }
 
-    public void setDescriptor(float descriptor) {
+    public void setDescriptor(String descriptor) {
         this.descriptor = descriptor;
     }
 

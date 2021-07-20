@@ -3,16 +3,17 @@ public class Boat extends Vehicle {
     public float draft;
     public String manufacturer;
 
-    public Boat(float identifier,
-                float descriptor,
+    public Boat(String identifier,
+                String descriptor,
                 float weight,
                 float width,
                 float height,
+                float length,
                 String power,
                 float draft,
                 String manufacturer) {
 
-        super(identifier, descriptor, weight, width, height);
+        super(identifier, descriptor, weight, width, height, length);
 
         this.power = power;
         this.draft = draft;

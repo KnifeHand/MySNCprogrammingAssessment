@@ -5,17 +5,18 @@ public class Car extends Vehicle{
     public String bodyStyle;
     public String fuel;
 
-    public Car(float identifier,
-               float descriptor,
+    public Car(String identifier,
+               String descriptor,
                float weight,
                float width,
                float height,
+               float length,
                String manufacturer,
                int modelYear,
                String bodyStyle,
                String fuel) {
 
-        super(identifier, descriptor, weight, width, height);
+        super(identifier, descriptor, weight, width, height, length);
 
         this.manufacturer = manufacturer;
         this.modelYear = modelYear;
