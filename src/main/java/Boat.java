@@ -44,4 +44,11 @@ public class Boat extends Vehicle {
     public void setManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
     }
+
+    public String toString(){
+        String str = getIdentifier() + ", " + getDescriptor() + ", " + getWeight() + ", " + getWidth() + ", " + getHeight()
+                + ", " + getLength() + ", " + getPower() + ", " + getDraft() + ", " + getManufacturer();
+
+        return str;
+    }
 }

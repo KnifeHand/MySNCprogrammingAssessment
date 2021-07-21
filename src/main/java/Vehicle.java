@@ -67,4 +67,11 @@ public class Vehicle {
         this.height = height;
     }
 
+//    public String toString(){
+//        String str = getIdentifier() + ", " + getDescriptor() + ", " + getWeight() + ", " + getWidth() + ", " + getHeight()
+//                + ", " + getLength();
+//
+//        return str;
+//    }
+
 }
