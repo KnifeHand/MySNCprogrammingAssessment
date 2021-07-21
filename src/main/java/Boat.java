@@ -1,3 +1,9 @@
+/**
+ * This class creates a Boat object that extends from the Vehicle class attributes.
+ *
+ * @author - Matt Hurt
+ */
+
 public class Boat extends Vehicle {
     // Properties
     private String power, manufacturer;

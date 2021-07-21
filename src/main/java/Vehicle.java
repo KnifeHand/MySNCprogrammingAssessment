@@ -1,15 +1,18 @@
+/**
+ * This class facilitates the creation of a vehicle object with all of the
+ * appropriate attributes of the class.
+ *
+ * @author - Matt Hurt
+ */
+
 public class Vehicle {
     // Create class attributes
     private String identifier, descriptor;
     private float weight, width, height, length;
 
     // Vehicle constructor
-    public Vehicle(String identifier,
-                   String descriptor,
-                   float weight,
-                   float width,
-                   float height,
-                   float length) {
+    public Vehicle(String identifier, String descriptor, float weight, float width,
+                   float height, float length) {
 
         this.identifier = identifier;
         this.descriptor = descriptor;
@@ -19,6 +22,7 @@ public class Vehicle {
         this.length = length;
     }
 
+    // Getters and Setters
     public float getLength() {
         return length;
     }
@@ -35,7 +39,7 @@ public class Vehicle {
         this.identifier = identifier;
     }
 
-    public String  getDescriptor() {
+    public String getDescriptor() {
         return descriptor;
     }
 
@@ -66,12 +70,4 @@ public class Vehicle {
     public void setHeight(float height) {
         this.height = height;
     }
-
-//    public String toString(){
-//        String str = getIdentifier() + ", " + getDescriptor() + ", " + getWeight() + ", " + getWidth() + ", " + getHeight()
-//                + ", " + getLength();
-//
-//        return str;
-//    }
-
 }

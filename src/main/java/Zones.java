@@ -1,3 +1,9 @@
+/**
+ * This class facilitates a way of checking which zone the vehicle is in.
+ *
+ * @author - Matt Hurt
+ */
+
 class Zone {
     private final double zone1StartLat = 15.6;
     private final double zone1EndLat = 56.2;
@@ -19,35 +25,27 @@ class Zone {
     private final double zone4StartLong = 62.2;
     private final double zone4EndLong = 94.5;
 
-    public void checkZone(double startLat, double startLong, String vicType) throws Exception {
-        if (!vicType.equals("Car")) {
-            ///////// Zone 1 ////////////
-            if (startLat < zone1StartLat) {
-                throw new Exception("Latitude must be > " + zone1StartLat);
-            }
-            if (startLat > zone1EndLat) {
-                throw new Exception("Latitude must be > " + zone1EndLat);
-            }
-            if (startLong < zone1StartLong) {
-                throw new Exception("Longitude must be > " + zone1StartLong);
-            }
-            if (startLong > zone1EndLong) {
-                throw new Exception("Longitude must be < " + zone1EndLong);
-            }
-            ///////// Zone 2 ///////////
-//            if (startLat < zone2StartLat) {
-//                throw new Exception("longitude must be > " + zone2StartLat);
-//            }
-//            if (startLat > zone2EndLat) {
-//                throw new Exception("longitude must be < " + zone2EndLat);
-//            }
-//            if (startLong < zone2StartLong) {
-//                throw new Exception("longitude must be > " + zone2StartLong);
-//            }
-//            if (startLong > zone2EndLong) {
-//                throw new Exception("longitude must be < " + zone2EndLong);
-//            }
+    /**
+     * Checks conditions of the current position of the vehicle are within the
+     * range boundary of the zone. A useful print statement is sent to the console
+     * along with the current position coordinates of the vehicle to observe if
+     * the vehicle is traveling in the zone or not.
+     *
+     * @param startLat - Recieves current Latitude from add method in TripData class and checks to see if in bounds.
+     * @param startLong - Recieves current Longitude from add method in TripData class and checks to see if in bounds.
+     */
+    public void checkZone(double startLat, double startLong, Vehicle vic) {
+        System.out.println(vic);
+        if (startLat > zone1StartLat && startLat < zone1EndLat && startLong > zone1StartLong && startLong < zone1EndLong) {
+            System.out.println("In bounds of Zone1 " + startLat + ", " + startLong);
+        } else if (startLat > zone2StartLat && startLat < zone2EndLat && startLong > zone2StartLong && startLong < zone2EndLong) {
+            System.out.println("In bounds of Zone2 "+ startLat + ", " + startLong);
+        } else if (startLat > zone3StartLat && startLat < zone3EndLat && startLong > zone3StartLong && startLong < zone3EndLong) {
+            System.out.println("In bounds of Zone3 "+ startLat + ", " + startLong);
+        } else if (startLat > zone4StartLat && startLat < zone4EndLat && startLong > zone4StartLong && startLong < zone4EndLong) {
+            System.out.println("In bounds of Zone4 "+ startLat + ", " + startLong);
+        } else {
+            System.out.println("Out of bounds "+ startLat + ", " + startLong);
         }
-        System.out.println("Good to travel here!");
     }
 }

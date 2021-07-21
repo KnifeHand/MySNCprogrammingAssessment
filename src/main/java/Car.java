@@ -1,3 +1,9 @@
+/**
+ * This class creates a Car object that extends from the Vehicle class attributes.
+ *
+ * author - Matt Hurt
+ */
+
 public class Car extends Vehicle{
     // Properties
     private String manufacturer, bodyStyle, fuel;
@@ -21,7 +27,7 @@ public class Car extends Vehicle{
         this.bodyStyle = bodyStyle;
         this.fuel = fuel;
     }
-
+    // Getters and Setters
     public String getManufacturer() {
         return manufacturer;
     }
